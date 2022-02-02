@@ -27,7 +27,7 @@ class AutoRouteInformationProvider extends RouteInformationProvider
 
   @override
   void routerReportsNewRouteInformation(RouteInformation routeInformation,
-      {required RouteInformationReportingType type}) {
+      {RouteInformationReportingType type = RouteInformationReportingType.none}) {
     var replace = type == RouteInformationReportingType.neglect ||
         (type == RouteInformationReportingType.none &&
             _valueInEngine.location == routeInformation.location);
